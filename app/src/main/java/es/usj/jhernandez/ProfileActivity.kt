@@ -22,7 +22,7 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         binding.tvEmail.setOnClickListener{
-            email()
+            emailTo()
         }
 
     }
@@ -33,11 +33,10 @@ class ProfileActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun email(){
+    fun emailTo(){
         val email=binding.tvEmail.text
-        val uri=Uri.parse("mailto:$email")
-        val intent=Intent(Intent.ACTION_SEND,uri)
+        val intent = Intent(Intent.ACTION_SENDTO)
+        intent.data = Uri.parse("mailto:")
         startActivity(intent)
-
     }
 }
