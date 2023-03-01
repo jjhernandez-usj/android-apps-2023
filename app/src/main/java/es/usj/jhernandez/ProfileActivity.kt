@@ -33,10 +33,10 @@ class ProfileActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun emailTo(){
-        val email=binding.tvEmail.text
+    fun emailTo() {
+        val email = binding.tvEmail.text
         val intent = Intent(Intent.ACTION_SENDTO)
-        intent.data = Uri.parse("mailto:")
+        intent.data = Uri.parse("mailto:$email")
         startActivity(intent)
     }
 }
