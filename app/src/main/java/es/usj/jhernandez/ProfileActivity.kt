@@ -18,12 +18,26 @@ class ProfileActivity : AppCompatActivity() {
         binding.tvPhone.setOnClickListener{
             Toast.makeText(this,"hola", Toast.LENGTH_SHORT).show()
             call()
+
         }
+
+        binding.tvEmail.setOnClickListener{
+            email()
+        }
+
     }
     fun call(){
         val phone=binding.tvPhone.text
         val uri= Uri.parse("tel:$phone")
         val intent=Intent(Intent.ACTION_DIAL,uri)
         startActivity(intent)
+    }
+
+    fun email(){
+        val email=binding.tvEmail.text
+        val uri=Uri.parse("mailto:$email")
+        val intent=Intent(Intent.ACTION_SEND,uri)
+        startActivity(intent)
+
     }
 }
