@@ -1,5 +1,7 @@
 package es.usj.jhernandez
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -15,6 +17,13 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.tvPhone.setOnClickListener{
             Toast.makeText(this,"hola", Toast.LENGTH_SHORT).show()
+            call()
         }
+    }
+    fun call(){
+        val phone=binding.tvPhone.text
+        val uri= Uri.parse("tel:$phone")
+        val intent=Intent(Intent.ACTION_DIAL,uri)
+        startActivity(intent)
     }
 }
