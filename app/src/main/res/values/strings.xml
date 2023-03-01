@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">My First App</string>
     <string name="hello_world">Hello World USJ!</string>
+    <string name="userName">Xabier</string>
+    <string name="userPhone">666666666</string>
+    <string name="userEmail">usj@usj.es</string>
 </resources>
