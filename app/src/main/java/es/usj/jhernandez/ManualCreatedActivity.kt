@@ -1,7 +1,9 @@
 package es.usj.jhernandez
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import es.usj.jhernandez.databinding.ActivityManualCreatedBinding
@@ -16,8 +18,13 @@ class ManualCreatedActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState, persistentState)
         setContentView(view.root)
         show("onCreate")
+        view.button.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
     }
     private fun show(method: String) {
+        Log.v("METHOD", method)
         Toast.makeText(this, "Method $method called!!", Toast.LENGTH_SHORT).show()
     }
     override fun onStart() {
