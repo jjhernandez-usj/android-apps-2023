@@ -4,4 +4,6 @@
     <string name="userName">Xabier</string>
     <string name="userPhone">666666666</string>
     <string name="userEmail">usj@usj.es</string>
+    <string name="tob">ToB</string>
+    <string name="toc">TOC</string>
 </resources>
