@@ -13,18 +13,6 @@
         tools:targetApi="31">
         <activity
             android:name=".ActivityLayout"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityD"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityC"
-            android:exported="false"/>
-        <activity
-            android:name=".ActivityB"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityA"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,13 +21,23 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ActivityD"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityC"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityB"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityA"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".ProfileActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"

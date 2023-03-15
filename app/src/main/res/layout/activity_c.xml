@@ -6,27 +6,4 @@
     android:layout_height="match_parent"
     tools:context=".ActivityC">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/to_a"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="189dp" />
-
-    <Button
-        android:id="@+id/btnToEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/send_email"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="281dp" />
-
-    <Button
-        android:id="@+id/btnToCall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/call"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="380dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
