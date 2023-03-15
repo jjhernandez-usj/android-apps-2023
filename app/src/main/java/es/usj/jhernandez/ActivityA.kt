@@ -22,6 +22,7 @@ class ActivityA : AppCompatActivity() {
         }
         binding.btntoC.setOnClickListener{
             val intent = Intent(this, ActivityC::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
             startActivity(intent)
         }
 

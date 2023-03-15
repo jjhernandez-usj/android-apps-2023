@@ -15,6 +15,12 @@
             android:name=".ActivityLayout"
             android:exported="false" />
         <activity
+            android:name=".ActivityD"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityC"
+            android:exported="false"/>
+        <activity
             android:name=".ActivityB"
             android:exported="false" />
         <activity

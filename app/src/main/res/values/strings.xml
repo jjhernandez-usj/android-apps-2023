@@ -6,4 +6,9 @@
     <string name="userEmail">usj@usj.es</string>
     <string name="tob">ToB</string>
     <string name="toc">TOC</string>
+    <string name="to_a">To A</string>
+    <string name="send_email">Send email</string>
+    <string name="call">Call</string>
+    <string name="finish">Finish</string>
+    <string name="insert_a_value">Insert a value</string>
 </resources>
