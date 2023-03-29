@@ -2,6 +2,7 @@ package es.usj.jhernandez
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import es.usj.jhernandez.databinding.ActivityUiaBinding
@@ -15,6 +16,7 @@ class ActivityUIA : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(view.root)
         view.btnLogin.isEnabled = false
+        view.btnLogin.visibility = View.INVISIBLE
         view.etUsername.addTextChangedListener {
             userEmpty = it?.length == 0
             checkBtnEnabled()

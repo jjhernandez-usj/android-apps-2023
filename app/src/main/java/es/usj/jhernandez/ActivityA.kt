@@ -3,8 +3,6 @@ package es.usj.jhernandez
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import es.usj.jhernandez.databinding.ActivityProfileBinding
 import es.usj.jhernandez.databinding.ActivityaBinding
 
 class ActivityA : AppCompatActivity() {

@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import es.usj.jhernandez.databinding.ActivityCBinding
-import es.usj.jhernandez.databinding.ActivityProfileBinding
-
 class ActivityC : AppCompatActivity() {
 
     private val binding : ActivityCBinding by lazy {
