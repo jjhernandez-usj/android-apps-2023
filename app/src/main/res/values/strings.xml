@@ -20,4 +20,8 @@
     <string name="company_id">Company ID</string>
     <string name="Citizen">Citizen</string>
     <string name="Company">Company</string>
+    <string name="message">Message</string>
+    <string name="subject">Subject</string>
+    <string name="to">To</string>
+    <string name="send">Send</string>
 </resources>
