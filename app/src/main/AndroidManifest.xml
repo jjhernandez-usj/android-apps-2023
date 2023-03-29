@@ -12,14 +12,16 @@
         android:theme="@style/Theme.MyFirstApp"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityUIB"
+            android:exported="false" />
+        <activity
             android:name=".ActivityUIA"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".ActivityD"
@@ -32,9 +34,7 @@
             android:exported="false" />
         <activity
             android:name=".ActivityA"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".ProfileActivity"
             android:exported="true">

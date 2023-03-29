@@ -14,4 +14,10 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="company">company</string>
+    <string name="init_operation">init operation</string>
+    <string name="citizen">citizen</string>
+    <string name="company_id">Company ID</string>
+    <string name="Citizen">Citizen</string>
+    <string name="Company">Company</string>
 </resources>
