@@ -1,8 +1,8 @@
 package es.usj.jhernandez
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import es.usj.jhernandez.databinding.ActivityUiaBinding
@@ -16,7 +16,7 @@ class ActivityUIA : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(view.root)
         view.btnLogin.isEnabled = false
-        view.btnLogin.visibility = View.INVISIBLE
+
         view.etUsername.addTextChangedListener {
             userEmpty = it?.length == 0
             checkBtnEnabled()
@@ -47,9 +47,10 @@ class ActivityUIA : AppCompatActivity() {
 
         if(view.etUsername.text.toString()==view.etPassword.text.toString()){
 
-            Toast.makeText(this, "Welcome ${view.etUsername.text}" , Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, ActivityUIB::class.java)
+            startActivity(intent)
 
-        }else{
+        } else{
             Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
         }
 

@@ -23,27 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ActivityD"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityC"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityB"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityA"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
     </application>
 
 </manifest>

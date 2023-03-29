@@ -6,54 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".ActivityUIB">
 
-    <Button
-        android:id="@+id/btniop"
-        android:layout_width="202dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="250dp"
-        android:text="@string/init_operation"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/etcompanyid"
-        android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="100dp"
-        android:autofillHints=""
-        android:hint="@string/company_id"
-        android:inputType="text"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/spnrcountry"
-        android:layout_width="200dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="50dp"
-        android:autofillHints="country"
-        android:minHeight="48dp"
-        android:spinnerMode="dropdown"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
         android:checkedButton="@id/rbtncompany"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/spnrcountry"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,34 +37,69 @@
 
     </RadioGroup>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/companyLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
+        android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/etcompanyid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/company_id"
+            android:inputType="text"
+            android:textSize="48sp" />
+
+        <Spinner
+            android:id="@+id/spnrcountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="country"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown" />
+
+        <Button
+            android:id="@+id/btnInitCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/init_operation" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/citizenLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Button"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+
+        <EditText
+            android:id="@+id/tvFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="48sp"
+            android:text="@string/first_name" />
+
+        <EditText
+            android:id="@+id/tvSurname"
+            android:textSize="48sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/surname" />
+
+        <Button
+            android:id="@+id/btnInitCitizen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/init_citizen" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

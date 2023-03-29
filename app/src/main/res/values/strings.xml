@@ -24,4 +24,7 @@
     <string name="subject">Subject</string>
     <string name="to">To</string>
     <string name="send">Send</string>
+    <string name="first_name">First name</string>
+    <string name="surname">Surname</string>
+    <string name="init_citizen">Init Citizen</string>
 </resources>
