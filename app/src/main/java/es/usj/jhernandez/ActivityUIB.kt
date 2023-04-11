@@ -3,7 +3,7 @@ package es.usj.jhernandez
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.RadioButton
+import android.widget.*
 import es.usj.jhernandez.databinding.ActivityUiaBinding
 import es.usj.jhernandez.databinding.ActivityUibBinding
 
@@ -19,6 +19,29 @@ class ActivityUIB : AppCompatActivity() {
 
         view.rbtnCitizen.setOnCheckedChangeListener { compoundButton, _ -> onRadioButtonClicked(compoundButton) }
         view.rbtncompany.setOnCheckedChangeListener { compoundButton, _ -> onRadioButtonClicked(compoundButton) }
+
+
+        // Spinner config
+        val spinner: Spinner = findViewById(view.spnrcountry.id);
+
+        val values = resources.getStringArray(R.array.country_array)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, values)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner.adapter = adapter
+
+        var selectedValue: String? = null
+
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, i: Int, l: Long) {
+                selectedValue = adapterView?.getItemAtPosition(i).toString()
+                Toast.makeText(applicationContext, selectedValue, Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onNothingSelected(adapterView: AdapterView<*>?) {
+            }
+        }
+        // spinner config end
+
     }
 
     private fun onRadioButtonClicked(view: View) {

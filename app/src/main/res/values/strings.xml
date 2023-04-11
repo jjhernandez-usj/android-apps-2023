@@ -27,4 +27,14 @@
     <string name="first_name">First name</string>
     <string name="surname">Surname</string>
     <string name="init_citizen">Init Citizen</string>
+
+    <string-array name="country_array">
+        <item>France</item>
+        <item>Spain</item>
+        <item>USA</item>
+        <item>England</item>
+        <item>Germany</item>
+        <item>Portugal</item>
+    </string-array>
+
 </resources>
