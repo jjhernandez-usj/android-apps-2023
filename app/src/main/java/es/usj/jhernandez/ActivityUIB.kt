@@ -1,15 +1,14 @@
 package es.usj.jhernandez
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
-import es.usj.jhernandez.databinding.ActivityUiaBinding
+import androidx.appcompat.app.AppCompatActivity
 import es.usj.jhernandez.databinding.ActivityUibBinding
 
 class ActivityUIB : AppCompatActivity() {
 
-    private val view : ActivityUibBinding by lazy {
+    private val view by lazy {
         ActivityUibBinding.inflate(layoutInflater)
     }
 
@@ -42,6 +41,16 @@ class ActivityUIB : AppCompatActivity() {
         }
         // spinner config end
 
+        view.rbtnCitizen.isChecked = true
+        view.companyLayout.visibility = View.INVISIBLE
+        view.rbtnCitizen.setOnCheckedChangeListener { _, _ ->
+            view.citizenLayout.visibility = View.INVISIBLE
+            view.companyLayout.visibility = View.VISIBLE
+        }
+        view.rbtncompany.setOnCheckedChangeListener { _, _ ->
+            view.citizenLayout.visibility = View.VISIBLE
+            view.companyLayout.visibility = View.INVISIBLE
+        }
     }
 
     private fun onRadioButtonClicked(view: View) {
