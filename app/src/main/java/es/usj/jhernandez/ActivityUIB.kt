@@ -1,9 +1,11 @@
 package es.usj.jhernandez
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
+import android.widget.Toast
 import es.usj.jhernandez.databinding.ActivityUiaBinding
 import es.usj.jhernandez.databinding.ActivityUibBinding
 
@@ -19,6 +21,9 @@ class ActivityUIB : AppCompatActivity() {
 
         view.rbtnCitizen.setOnCheckedChangeListener { compoundButton, _ -> onRadioButtonClicked(compoundButton) }
         view.rbtncompany.setOnCheckedChangeListener { compoundButton, _ -> onRadioButtonClicked(compoundButton) }
+        view.btnInitCitizen.setOnClickListener{
+            loginClient()
+        }
     }
 
     private fun onRadioButtonClicked(view: View) {
@@ -40,6 +45,19 @@ class ActivityUIB : AppCompatActivity() {
                         this.view.companyLayout.visibility = View.VISIBLE
                     }
             }
+        }
+    }
+    private fun loginClient(){
+        val firstName = view.tvFirstName.text.toString()
+        val surname = view.tvSurname.text.toString()
+
+        if(firstName.isNotEmpty() && surname.isNotEmpty()){
+            val intent = Intent(this, ActivityUID::class.java).apply {
+                putExtra("clientName", firstName)
+            }
+            startActivity(intent)
+        } else{
+            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
         }
     }
 
