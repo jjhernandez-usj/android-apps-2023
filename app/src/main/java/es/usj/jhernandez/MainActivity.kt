@@ -24,7 +24,10 @@ class MainActivity : AppCompatActivity() {
         view.listView.adapter = adapter
         view.listView.onItemClickListener = object: AdapterView.OnItemClickListener{
             override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                Toast.makeText(this@MainActivity, " ", Toast.LENGTH_SHORT).show()
+
+                val selectedItem = adapter.getItem(p2)
+                Toast.makeText(this@MainActivity, selectedItem+" clicked", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this@MainActivity, " ", Toast.LENGTH_SHORT).show()
             }
 
         }
